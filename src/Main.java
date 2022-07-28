@@ -11,7 +11,7 @@ public class Main {
         int x = 8;
         x = 7;
         int y = x;
-        System.out.println(x + y);
+//        System.out.println(x + y);
 
         String newString = "This is my new string";
         String s = "Hey, what's up?fgasdrjdgykfghukfhulkghilvhfukcvgyj4tu56u65";
@@ -32,17 +32,79 @@ public class Main {
 //        printHello(s);
 //        printSomething();
 
-        int[] arrInt = {1,2,3,4,5,6}; // 21
-        int r = sumOfArray(arrInt);
-        System.out.println(r);
-        String hadash = "Hadash";
-        //stam();
-        System.out.println("Rossita");
+
+//        int r = sumOfArray(arrInt);
+//        System.out.println(r);
+//        String hadash = "Hadash";
+//        //stam();
+//        System.out.println("Rossita");
+
+        int[] arrInt = {1,2,3,4,5,6,7}; // 21 {2,3,4,5,6,7}
+        int[] arrInt2 = {5,8,3};
+
+        //arithmetic  + - / * ++ --  %
+        //comparison     == != > < <= >=
+        //assignment  = += -= /= *=
+
+        int t = 7;
+        if (t%2 == 1){
+            System.out.println("odd");
+        }else{
+            System.out.println("even");
+        }
     }
 
-    public static void stam(String s){
-        // s = "Cat"
-        System.out.println(s.length());
+    public static void printSecond(int[] e){
+        for (int i = 2; i < e.length; i += 3) {
+            System.out.println(e[i]);
+        }
+    }
+    public static void printArr(int[] arr){
+        System.out.print("{");
+        for (int i = 0; i < arr.length; i++) {
+            if(i < arr.length-1){
+                System.out.print(arr[i] + ", ");
+            }else{
+                System.out.print(arr[i]);
+            }
+        }
+        System.out.println("}");
+    }
+
+    public static int[] plusOne(int[] arr){
+        int[] temp = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            temp[i] = arr[i] + 1;
+        }
+        return temp;
+    }
+
+    public static String reverse(String s){
+        String temp = "";
+        for (int i = s.length()-1; i >= 0; i--) {
+            temp += s.charAt(i);
+        }
+        return temp;
+    }
+
+    public static String threeLetters(String s){
+        String temp = "";
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < 3; j++) {
+                temp += s.charAt(i);
+            }
+        }
+        return temp;
+    }
+
+    public static void howManyTimes(String s, char c){
+        int counter = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (c == s.charAt(i)){
+                counter++;
+            }
+        }
+        System.out.println(counter);
     }
 
     public static int sumOfArray(int[] arr){
